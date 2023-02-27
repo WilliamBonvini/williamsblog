@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://astonishing-snickerdoodle-3dc149.netlify.app"
 theme = "hugo-apero"
 languageCode = "en"
 title = "William Bonvini's Blog"
