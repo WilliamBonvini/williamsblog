@@ -28,8 +28,8 @@ enableEmoji = true
     style = "github"
     
 [params]
-  orgName = "RStudio"
-  orgLocal = "Anywhere"
+  orgName = "William Bonvini"
+  orgLocal = ""
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico"
   logo = "/img/logo.png"
@@ -41,7 +41,7 @@ enableEmoji = true
   socialInFooter = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
-  sharing_image = "/img/papillons.jpg"
+  sharing_image = "/img/logo.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "William_Bonvini"
   
@@ -121,20 +121,21 @@ enableEmoji = true
     url = "/blog/"
     weight = 2
   [[menu.header]]
+    name = "Research"
+    title = "Research"
+    url = "/research/"
+    weight = 3
+  [[menu.header]]
     name = "Projects"
     title = "Project Portfolio"
     url = "/project/"
-    weight = 3
+    weight = 4
   [[menu.header]]
     name = "Talks"
     title = "Talks"
     url = "/talk/"
-    weight = 4
-  [[menu.header]]
-    name = "A collection"
-    title = "A collection"
-    url = "/collection/"
     weight = 5
+  
   
   # Configure footer  
   [[menu.footer]]
@@ -147,11 +148,7 @@ enableEmoji = true
     title = "Contact form"
     url = "/contact/"
     weight = 2
-  [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
-    weight = 3
+  
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]

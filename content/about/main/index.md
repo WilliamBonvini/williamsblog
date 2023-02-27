@@ -1,17 +1,20 @@
 ---
 ## Configure page content in wide column
-title: "Why apéro?" # leave blank to exclude
+title: "Biography" # leave blank to exclude
 number_featured: 1 # pulling from mainSections in config.toml
 use_featured: false # if false, use most recent by date
 number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: |
-  Apéro is a unique kind of casual get-together in French culture, when you gather with friends and get to know each other better over some apéritifs, snacks, and anything in between. A good apéro is one where you'd happily spend a few hours just hanging out.
+  I was born in 1996 in Milan and lived almost my whole life in Saronno, a small city in northern Italy. I studied *Computer Science* at *Politecnico di Milano*, where I graduated in April 2021.  
+  I particularly enjoyed my time at Politecnico, where I found a very collaborative environment and developed a taste for writing scientific material.				
+
+  Other than that, I've always had an interest in music and started playing the guitar at a young age (occasionally I perform in the streets of Milan).
   
-  I hope this theme helps you create your own virtual apéro. A place where you and your site's visitors enjoy spending time, and one that helps folks get to know you better. 
+
 show_outro: true
 outro: |
-  <i class="fas fa-glass-cheers pr2"></i>Sincere thanks to [Maëlle Salmon](https://masalmon.eu/) for her help naming this Hugo theme!
+  <i class="fas fa-glass-cheers pr2"></i>Hey reader, thanks for passing by!
 ---
 
 ** index doesn't contain a body, just front matter above.

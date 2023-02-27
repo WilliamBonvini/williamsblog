@@ -6,7 +6,11 @@ show_title_as_headline: true
 title: Contributors
 ---
 
-Thank you to all the folks who have contributed both technical and creative skills to this project:
+
+
+Thank you to all the folks who have contributed both technical and creative skills to this Hugo theme that I've wisely chosen:
+
+* [Thomas Mock :wolf:](https://themockup.blog/about.htm) The author of the [blogpost]( https://themockup.blog/posts/2020-08-01-building-a-blog-with-distill/index.html) that made me find Desirée's website (look below).
 
 + [Desirée De Leon :giraffe:](http://desiree.rbind.io/) (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)
 
@@ -24,4 +28,5 @@ Thank you to all the folks who have contributed both technical and creative skil
 
 + [Jannik Buhr :otter:](https://jmbuhr.de) (enabling math rendering with mathjax and katex)
 
-And last but not least, Eric Anderson and the team at [Formspree](https://formspree.io/) for developing a Hugo theme with such great bones: <https://github.com/formspree/blogophonic-hugo>
+And last but not least, Eric Anderson and the team at [Formspree](https://formspree.io/) for developing a [Hugo theme](https://github.com/formspree/blogophonic-hugo) with such great bones.
+
