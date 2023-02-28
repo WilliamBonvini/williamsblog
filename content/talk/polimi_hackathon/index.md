@@ -13,7 +13,7 @@ layout: single
 links:
 - icon: door-open
   icon_pack: fas
-  name: EESTECH CHALLENGE WEBSITE
+  name: EESTECH WEBSITE
   url: https://eestechchallenge.eestec.net/
 location: Turin, Italy
 show_post_time: false

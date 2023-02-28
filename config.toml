@@ -101,7 +101,6 @@ enableEmoji = true
       icon      = "spotify" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://open.spotify.com/user/chattershuts"
- 
 
 [taxonomies]
   category = "categories"
