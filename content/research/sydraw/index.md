@@ -9,8 +9,12 @@ title: Sydraw
 links:
 - icon: github
   icon_pack: fab
-  name: code
+  name: Code
   url: https://github.com/WilliamBonvini/syndalib
+- icon: book
+  icon_pack: fa
+  name: Documentation
+  url: https://sydraw.readthedocs.io/en/latest/
 ---
 
 ### High level overview
