@@ -15,12 +15,16 @@ links:
   icon_pack: fa
   name: Documentation
   url: https://sydraw.readthedocs.io/en/latest/
+- icon: play
+  icon_pak: fa
+  name: Demo
+  url: https://sydraw-demo.onrender.com/
 ---
 
 ### High level overview
 
 Sydraw (Synthetic Data Library) is a python library that helps you create synthetic 2D point clouds for single/multi-model single/multi-class tasks.  
-Check out the GitHub repository and [this](https://sydraw-demo.onrender.com/) demo for a comprehensive overview of its functionalities.
+Check out the links above for a comprehensive overview of its functionalities.
 
 ![](imgs/syndalib.png)
 
