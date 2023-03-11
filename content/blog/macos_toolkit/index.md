@@ -1,5 +1,20 @@
-# MacOS Programmer's toolkit
+---
+title: "MacOS Programmer's Toolkit"
+subtitle: ""
+excerpt: ""
+date: 2023-01-15
+author: "William Bonvini"
+draft: true
+images:
+series:
+tags:
+categories:
+- nlp
+- topic modeling
+layout: single
+---
 
+  
 
 
 The Apple-provided build of Python is installed in 
