@@ -8,6 +8,6 @@
     {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
   {{ end }}
   <li class="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-20">
-    <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>{{ .name }}</a>
+    {{ .name }}
   </li>
 {{ end }}
