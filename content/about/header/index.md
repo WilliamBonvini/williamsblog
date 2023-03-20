@@ -3,7 +3,7 @@
 text_align_right: false
 show_title_as_headline: false
 headline: |
-  Hi, I'm William Bonvini. Nice to meet you.
+  About
 ---
 
 <!-- this is a subheadline -->
