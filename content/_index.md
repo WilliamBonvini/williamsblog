@@ -8,7 +8,7 @@ images:
 - img/chip_sketch.png
 show_action_link: true
 show_social_links: true
-subtitle: Machine learning & Software Engineering.
+subtitle: Machine learning & Software Engineering
 text_align_left: false
 title: William Bonvini 
 type: home
