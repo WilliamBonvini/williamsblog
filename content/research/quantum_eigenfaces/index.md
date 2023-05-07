@@ -10,7 +10,7 @@ links:
 - icon: github
   icon_pack: fab
   name: Code
-  url: https://github.com/WilliamBonvini/quantum_eigenfaces
+  url: https://github.com/WilliamBonvini/quantum-eigenfaces/tree/main
 ---
 
 Submitted paper for [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) on
