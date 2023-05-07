@@ -298,4 +298,4 @@ Sources:
 
 * [Original paper](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf)
 * [Echen's blogpost](http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/) 
-* [Latent Dirichlet Allocation Using Gibbs Sampling](
+* [Latent Dirichlet Allocation Using Gibbs Sampling](https://ethen8181.github.io/machine-learning/clustering_old/topic_model/LDA.html)
