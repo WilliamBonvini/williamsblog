@@ -22,12 +22,7 @@ We propose a quantum machine learning algorithm for data classification, inspire
 classifiers with concepts from principal component analysis, enabling the automatic detection of outliers
 and finding use in anomaly detection domains beyond face recognition. Assuming classical input data, we
 formalize how to implement the algorithm using a quantum random access memory and state-of-the-art
-quantum linear algebra, discussing the complexity of performing the classification algorithm on a fault-
-tolerant quantum device. The asymptotic time complexity analysis shows that the quantum classification
-algorithm can be more efficient than its classical counterpart. We showcase an application of this algorithm for face recognition and image classification datasets with anomalies, obtaining promising results
-for the running time parameters. This work contributes to the growing field of quantum machine learning
-applications, and the algorithm’s simplicity makes it easily adoptable by future quantum machine learning
-practitioners.
+quantum linear algebra, discussing the complexity of performing the classification algorithm on a fault-tolerant quantum device. The asymptotic time complexity analysis shows that the quantum classification algorithm can be more efficient than its classical counterpart. We showcase an application of this algorithm for face recognition and image classification datasets with anomalies, obtaining promising results for the running time parameters. This work contributes to the growing field of quantum machine learning applications, and the algorithm’s simplicity makes it easily adoptable by future quantum machine learning practitioners.
 
 
 
