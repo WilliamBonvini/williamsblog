@@ -8,8 +8,8 @@ audio_link_label: "" # leave blank to exclude
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: Software Engineering
-- name: Mathematics and Machine Learning
-- name: Communication
+- name: Machine Learning
+- name: Mathematics
 ---
 
 ** index doesn't contain a body, just front matter above.
