@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/categories/</link>
+    <description>Recent content in Categories on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://williambonvini.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nlp</title>
+      <link>https://williambonvini.netlify.app/categories/nlp/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>topic modeling</title>
+      <link>https://williambonvini.netlify.app/categories/topic-modeling/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/topic-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://williambonvini.netlify.app/categories/machine-learning/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reinforcement learning</title>
+      <link>https://williambonvini.netlify.app/categories/reinforcement-learning/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://williambonvini.netlify.app/categories/documentation/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>course</title>
+      <link>https://williambonvini.netlify.app/categories/course/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workshop</title>
+      <link>https://williambonvini.netlify.app/categories/workshop/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackathon</title>
+      <link>https://williambonvini.netlify.app/categories/hackathon/</link>
+      <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/hackathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>https://williambonvini.netlify.app/categories/computer-vision/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://williambonvini.netlify.app/categories/deep-learning/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

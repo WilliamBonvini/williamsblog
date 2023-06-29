@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hackathon on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/categories/hackathon/</link>
+    <description>Recent content in hackathon on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://williambonvini.netlify.app/categories/hackathon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EESTECH challenge - Local Round</title>
+      <link>https://williambonvini.netlify.app/talk/polimi_hackathon/</link>
+      <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/talk/polimi_hackathon/</guid>
+      <description>Overview EESTEC (Electrical Engineering STudents&amp;rsquo; European assoCiation) organizes an engineering competition every year.
+In 2022 the competition topic was machine learning applications, so my colleagues at Machine Learning Reply and I organized a hackathon for them: An image classification task on 3D printed objects.
+Dataset The dataset comprised of images of objects created via a 3D printer.
+Some objects were defect free, some others presented well known types of 3D printer defects.</description>
+    </item>
+    
+  </channel>
+</rss>

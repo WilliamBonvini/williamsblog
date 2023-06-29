@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/tags/python/</link>
+    <description>Recent content in python on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://williambonvini.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personalized Cosmetics Startup</title>
+      <link>https://williambonvini.netlify.app/project/myformula/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/myformula/</guid>
+      <description>High Level Overview As an original team member of My-Formula, I worked closely with the founder during the company&amp;rsquo;s early stages.
+My-Formula is a cosmetics company that offers personalized hair products based on one&amp;rsquo;s habits and characteristics.
+In particular, I provided consultancy on the website development side, implemented the personalization algorithm, worked on the cloud infrastructure, and delivered aggregate reports on customers&amp;rsquo; behaviour on a regular basis.</description>
+    </item>
+    
+    <item>
+      <title>Senile Dementia Monitoring Tool</title>
+      <link>https://williambonvini.netlify.app/project/senile_dementia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/senile_dementia/</guid>
+      <description>High Level Overview Worked closely with the Galliera hospital from Genova to develop four cross-platform game apps in order to analyze the patients&amp;rsquo; cognitive abilities.
+Tech Stack Java LibGDX Python basic data science libraries (numpy, pandas, seaborn) List of games Memory Popular game.
+Memory is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn.</description>
+    </item>
+    
+  </channel>
+</rss>

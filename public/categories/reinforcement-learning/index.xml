@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reinforcement learning on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/categories/reinforcement-learning/</link>
+    <description>Recent content in reinforcement learning on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://williambonvini.netlify.app/categories/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Reinforcement Learning</title>
+      <link>https://williambonvini.netlify.app/blog/intro_to_rl/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/blog/intro_to_rl/</guid>
+      <description>High Level Overview An example of reinforcement learning: the agent learns optimally to backflip. Source: Composing Value Functions in Reinforcement Learning. In this blogpost we will introduce the most important concepts in Reinforcement learning and provide some real world examples, to show you how and when it is currently being used.
+This series is based on the lectures that DeepMind held for UCL in 2020, they are freely available at this YouTube link.</description>
+    </item>
+    
+  </channel>
+</rss>

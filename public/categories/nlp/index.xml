@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nlp on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/categories/nlp/</link>
+    <description>Recent content in nlp on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://williambonvini.netlify.app/categories/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Topic Modeling with LDA</title>
+      <link>https://williambonvini.netlify.app/blog/lda/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/blog/lda/</guid>
+      <description>Latent Dirichlet Allocation (LDA) is one of the most popular topic modeling techniques, even though the original paper has been published back in 2003. Topic modeling is a natural language processing technique that aims to automatically identify the underlying themes or topics in a collection of text documents. LDA produces two output
+a probability distribution on words to represent topics a probability distribution on topics to summarize documents So imagine you have the following set of sentences (a sentence is just a very short document):</description>
+    </item>
+    
+  </channel>
+</rss>

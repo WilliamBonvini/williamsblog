@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>William Bonvini on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/</link>
+    <description>Recent content in William Bonvini on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 May 2023 21:44:12 +0200</lastBuildDate><atom:link href="https://williambonvini.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Netlify</title>
+      <link>https://williambonvini.netlify.app/collection/day02/01-netlify/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/day02/01-netlify/</guid>
+      <description>So far, we&amp;rsquo;ve been leveraging GitHub Pages for publishing. This works great, but for blogdown we&amp;rsquo;ll start using Netlify. Let&amp;rsquo;s start RIGHT NOW with a site we&amp;rsquo;ve already built and published.
+Pre-requisites Pick either your postcards site, or your distill site from day 01. Refresh your memory- which repository was it again?</description>
+    </item>
+    
+    <item>
+      <title>A GitHub profile</title>
+      <link>https://williambonvini.netlify.app/collection/day01/01-github/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/day01/01-github/</guid>
+      <description>Profile https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile
+Pin projects to profile https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile
+Profile README This is new! Let&amp;rsquo;s do it:
+https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme</description>
+    </item>
+    
+    <item>
+      <title>Prework</title>
+      <link>https://williambonvini.netlify.app/collection/prework/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/prework/</guid>
+      <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you. Before attending the workshop, please complete the following prework.
+Set up RStudio Cloud Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). I want you to be able to work from your own laptop in this workshop, but Cloud is an important back-up plan should you run into troubles.</description>
+    </item>
+    
+    <item>
+      <title>A postcard</title>
+      <link>https://williambonvini.netlify.app/collection/day01/02-postcards/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/day01/02-postcards/</guid>
+      <description>Pre-requisites First, make sure you have the latest version of the postcards package installed from CRAN:
+install.packages(&amp;#34;postcards&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS). packageVersion(&amp;#34;postcards&amp;#34;) [1] ‘0.2.0’ Create GitHub repo Online.
+Clone GitHub repo usethis::create_from_github(&amp;#34;https://github.com/apreshill/global-postcard.git&amp;#34;) ✨ Commit &amp;amp; Push! ✨</description>
+    </item>
+    
+    <item>
+      <title>Using blogdown</title>
+      <link>https://williambonvini.netlify.app/collection/day02/02-blogdown/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/day02/02-blogdown/</guid>
+      <description>Pre-requisites First, make sure you have the latest version of the blogdown package installed from CRAN:
+install.packages(&amp;#34;blogdoown&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS). packageVersion(&amp;#34;blogdown&amp;#34;) [1] ‘1.0’ Create GitHub repo Online.
+Clone GitHub repo usethis::create_from_github(&amp;#34;https://github.com/apreshill/global-blogdown.git&amp;#34;) ✨ Commit &amp;amp; Push! ✨</description>
+    </item>
+    
+    <item>
+      <title>A distill site</title>
+      <link>https://williambonvini.netlify.app/collection/day01/03-distill/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/day01/03-distill/</guid>
+      <description>Pre-requisites First, make sure you have the latest version of the distill package installed from CRAN:
+install.packages(&amp;quot;distill&amp;quot;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS). &amp;lt;!-- --&amp;gt; packageVersion(&amp;quot;distill&amp;quot;) [1] ‘1.2’ Create GitHub repo Online.
+Clone GitHub repo usethis::create_from_github(&amp;quot;https://github.com/apreshill/global-distill.git&amp;quot;) ✨ Commit &amp;amp; Push!</description>
+    </item>
+    
+    <item>
+      <title>Warm woolen mittens</title>
+      <link>https://williambonvini.netlify.app/collection/day02/03-blogdown/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/collection/day02/03-blogdown/</guid>
+      <description> Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/collection/day02/03-blogdown/index.md To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: collection My layout is: single-series part 2! does this work? now for some very cool things more get ready! </description>
+    </item>
+    
+    <item>
+      <title>Shawn</title>
+      <link>https://williambonvini.netlify.app/project/shawn/</link>
+      <pubDate>Tue, 30 May 2023 21:44:12 +0200</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/shawn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantum Eigenfaces</title>
+      <link>https://williambonvini.netlify.app/research/quantum_eigenfaces/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/research/quantum_eigenfaces/</guid>
+      <description>Submitted paper for IEEE International Conference on Quantum Computing and Engineering (QCE) on the 1st of May 2023.
+Abstract We propose a quantum machine learning algorithm for data classification, inspired by the seminal computer vision approach of eigenfaces for face recognition. The algorithm enhances nearest neighbor/centroid classifiers with concepts from principal component analysis, enabling the automatic detection of outliers and finding use in anomaly detection domains beyond face recognition. Assuming classical input data, we formalize how to implement the algorithm using a quantum random access memory and state-of-the-art quantum linear algebra, discussing the complexity of performing the classification algorithm on a fault-tolerant quantum device.</description>
+    </item>
+    
+    <item>
+      <title>Topic Modeling with LDA</title>
+      <link>https://williambonvini.netlify.app/blog/lda/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/blog/lda/</guid>
+      <description>Latent Dirichlet Allocation (LDA) is one of the most popular topic modeling techniques, even though the original paper has been published back in 2003. Topic modeling is a natural language processing technique that aims to automatically identify the underlying themes or topics in a collection of text documents. LDA produces two output
+a probability distribution on words to represent topics a probability distribution on topics to summarize documents So imagine you have the following set of sentences (a sentence is just a very short document):</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Reinforcement Learning</title>
+      <link>https://williambonvini.netlify.app/blog/intro_to_rl/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/blog/intro_to_rl/</guid>
+      <description>High Level Overview An example of reinforcement learning: the agent learns optimally to backflip. Source: Composing Value Functions in Reinforcement Learning. In this blogpost we will introduce the most important concepts in Reinforcement learning and provide some real world examples, to show you how and when it is currently being used.
+This series is based on the lectures that DeepMind held for UCL in 2020, they are freely available at this YouTube link.</description>
+    </item>
+    
+    <item>
+      <title>Write better documentation with Sphinx</title>
+      <link>https://williambonvini.netlify.app/blog/sphinx/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/blog/sphinx/</guid>
+      <description>topic OS required modules Generate Sphinx documentation for a Python project with the ReadTheDocs theme. Windows venv High Level Overview Suppose that you have written a Python library and you want to share it with your colleagues. One of the most important things to do is to write a clear documentation. This tutorial will help you in achieving just that.
+Our sample project&amp;rsquo;s structure will look like this
+my_library | |---my_module.</description>
+    </item>
+    
+    <item>
+      <title>Talk on Self-Supervised Learning &amp; Multi-Task learning</title>
+      <link>https://williambonvini.netlify.app/talk/exchange/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/talk/exchange/</guid>
+      <description>Held a talk on successful applications of self-supervised learning and introductory overview on the training phase of the generalist agent Gato.</description>
+    </item>
+    
+    <item>
+      <title>NVIDIA Fundamentals of Deep Learning workshop</title>
+      <link>https://williambonvini.netlify.app/talk/deep_learning_bootcamp/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/talk/deep_learning_bootcamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EESTECH challenge - Local Round</title>
+      <link>https://williambonvini.netlify.app/talk/polimi_hackathon/</link>
+      <pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/talk/polimi_hackathon/</guid>
+      <description>Overview EESTEC (Electrical Engineering STudents&amp;rsquo; European assoCiation) organizes an engineering competition every year.
+In 2022 the competition topic was machine learning applications, so my colleagues at Machine Learning Reply and I organized a hackathon for them: An image classification task on 3D printed objects.
+Dataset The dataset comprised of images of objects created via a 3D printer.
+Some objects were defect free, some others presented well known types of 3D printer defects.</description>
+    </item>
+    
+    <item>
+      <title>AI &amp; GCP Course</title>
+      <link>https://williambonvini.netlify.app/talk/gcp_course/</link>
+      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/talk/gcp_course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sydraw</title>
+      <link>https://williambonvini.netlify.app/research/sydraw/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/research/sydraw/</guid>
+      <description> High level overview Sydraw (Synthetic Data Library) is a python library that helps you create synthetic 2D point clouds for single/multi-model single/multi-class tasks.
+Check out the links above for a comprehensive overview of its functionalities.
+Supported Parametric Models Ellipses Circles Hyperbolas Lines Hyperparameters number and tipology of parametric models number of total data points percentage of outliers (data points that do not belong to any model) percentage of noise corruption in each model </description>
+    </item>
+    
+    <item>
+      <title>Unsupervised learning for Multi-Model Consensus Maximization</title>
+      <link>https://williambonvini.netlify.app/research/ulmmcm/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/research/ulmmcm/</guid>
+      <description>High level overview Multi-model fitting is the task of retrieving several parametric models in unstructured data possibly contaminated by noise and outliers. This problem arises in many Computer Vision applications like the estimation of planes and primitives in architectural imagery and the recovery of multiple geometric transformations from stereo images.
+In this work we propose a novel Deep Learning architecture for solving multi-model fitting problems in an unsupervised fashion, relying on a consensus maximization formulation.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://williambonvini.netlify.app/contact/</link>
+      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/contact/</guid>
+      <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
+Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
+    </item>
+    
+    <item>
+      <title>Typography Styles &amp; Element Examples</title>
+      <link>https://williambonvini.netlify.app/elements/</link>
+      <pubDate>Mon, 18 Feb 2019 12:27:33 -0600</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/elements/</guid>
+      <description>Font Sizes A A A A A A A A 6rem
+(96px) 5rem
+(80px) 3rem
+(48px) 2.25rem
+(36px) 1.5rem
+(24px) 1.25rem
+(20px) 1rem
+(16px) .875rem
+(14px) Type Samples Head&amp;shy;line Sub&amp;shy;head&amp;shy;line Level 1 Heading One page to rule them all...well, not really. This page displays sample typography and page elements to illustrate their style. Things like headings and paragraphs showing the beautiful type scale, form elements, tabular data, and image layouts just to name a few.</description>
+    </item>
+    
+    <item>
+      <title>Academic Projects</title>
+      <link>https://williambonvini.netlify.app/project/academic_projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/academic_projects/</guid>
+      <description>Name Description Link Tech Stack Year Coursera course on RL Written teaching material on ML based methods for the Coursera course Advanced Recommender Systems link 2021 Android Game Development Developed 4 games (i.e. Memory) for Italian Senile Dementia Treatment Center to test their cognitive abilities Android; LibGDX 2021 ML Notes Android App Developed app that gathers markdown notes of academic courses I attended, enriched with quizzes and embedded YouTube Videos link Android 2020 Study on word embeddings bias Analyzed four papers to investigate methodologies for debiasing word embeddings link 2020 University Deep Learning Competition Competition consisting in the implementation of Keras models to perform three different tasks: classification; binary segmentation; visual question answering.</description>
+    </item>
+    
+    <item>
+      <title>Call Centers &amp; Genetic Algorithms</title>
+      <link>https://williambonvini.netlify.app/project/call_center/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/call_center/</guid>
+      <description>High Level Overview Client Developed a solution for an Italian company that provides other companies with qualified virtual assistants to support their customers.
+Problem They were looking for a way to automate the insertion of breaks in their turn allocation matrix, taking into considerations some constraints on the employees contract type (part-time, full-time) and role (team leader, inbound agent).
+Solution A genetic algorithm that takes in input the turn allocation matrix with no breaks allocated and generates a high number of constraints-compliant assignments at each iteration.</description>
+    </item>
+    
+    <item>
+      <title>Contributors</title>
+      <link>https://williambonvini.netlify.app/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/contributors/</guid>
+      <description>Thank you to all the folks who have contributed both technical and creative skills to this Hugo theme that I&amp;rsquo;ve wisely chosen:
+Thomas Mock 🐺 The author of the blogpost that made me find Desirée&amp;rsquo;s website (look below). Desirée De Leon 🦒 (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)
+Garrick Aden-Buie 🧙‍♀️ (debugged headroom.js and lent his panelset.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://williambonvini.netlify.app/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/license/</guid>
+      <description>The blogposts in this website are released under a Creative Commons Attribution-ShareAlike 4.0 International License.</description>
+    </item>
+    
+    <item>
+      <title>Personalized Cosmetics Startup</title>
+      <link>https://williambonvini.netlify.app/project/myformula/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/myformula/</guid>
+      <description>High Level Overview As an original team member of My-Formula, I worked closely with the founder during the company&amp;rsquo;s early stages.
+My-Formula is a cosmetics company that offers personalized hair products based on one&amp;rsquo;s habits and characteristics.
+In particular, I provided consultancy on the website development side, implemented the personalization algorithm, worked on the cloud infrastructure, and delivered aggregate reports on customers&amp;rsquo; behaviour on a regular basis.</description>
+    </item>
+    
+    <item>
+      <title>Senile Dementia Monitoring Tool</title>
+      <link>https://williambonvini.netlify.app/project/senile_dementia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/senile_dementia/</guid>
+      <description>High Level Overview Worked closely with the Galliera hospital from Genova to develop four cross-platform game apps in order to analyze the patients&amp;rsquo; cognitive abilities.
+Tech Stack Java LibGDX Python basic data science libraries (numpy, pandas, seaborn) List of games Memory Popular game.
+Memory is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn.</description>
+    </item>
+    
+  </channel>
+</rss>

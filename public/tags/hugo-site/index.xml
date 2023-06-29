@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo-site on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/tags/hugo-site/</link>
+    <description>Recent content in hugo-site on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://williambonvini.netlify.app/tags/hugo-site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Academic Projects</title>
+      <link>https://williambonvini.netlify.app/project/academic_projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/academic_projects/</guid>
+      <description>Name Description Link Tech Stack Year Coursera course on RL Written teaching material on ML based methods for the Coursera course Advanced Recommender Systems link 2021 Android Game Development Developed 4 games (i.e. Memory) for Italian Senile Dementia Treatment Center to test their cognitive abilities Android; LibGDX 2021 ML Notes Android App Developed app that gathers markdown notes of academic courses I attended, enriched with quizzes and embedded YouTube Videos link Android 2020 Study on word embeddings bias Analyzed four papers to investigate methodologies for debiasing word embeddings link 2020 University Deep Learning Competition Competition consisting in the implementation of Keras models to perform three different tasks: classification; binary segmentation; visual question answering.</description>
+    </item>
+    
+    <item>
+      <title>Call Centers &amp; Genetic Algorithms</title>
+      <link>https://williambonvini.netlify.app/project/call_center/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/call_center/</guid>
+      <description>High Level Overview Client Developed a solution for an Italian company that provides other companies with qualified virtual assistants to support their customers.
+Problem They were looking for a way to automate the insertion of breaks in their turn allocation matrix, taking into considerations some constraints on the employees contract type (part-time, full-time) and role (team leader, inbound agent).
+Solution A genetic algorithm that takes in input the turn allocation matrix with no breaks allocated and generates a high number of constraints-compliant assignments at each iteration.</description>
+    </item>
+    
+  </channel>
+</rss>

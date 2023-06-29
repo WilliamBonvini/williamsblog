@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>documentation on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/categories/documentation/</link>
+    <description>Recent content in documentation on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://williambonvini.netlify.app/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Write better documentation with Sphinx</title>
+      <link>https://williambonvini.netlify.app/blog/sphinx/</link>
+      <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/blog/sphinx/</guid>
+      <description>topic OS required modules Generate Sphinx documentation for a Python project with the ReadTheDocs theme. Windows venv High Level Overview Suppose that you have written a Python library and you want to share it with your colleagues. One of the most important things to do is to write a clear documentation. This tutorial will help you in achieving just that.
+Our sample project&amp;rsquo;s structure will look like this
+my_library | |---my_module.</description>
+    </item>
+    
+  </channel>
+</rss>

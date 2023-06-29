@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research projects on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/research/</link>
+    <description>Recent content in Research projects on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://williambonvini.netlify.app/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantum Eigenfaces</title>
+      <link>https://williambonvini.netlify.app/research/quantum_eigenfaces/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/research/quantum_eigenfaces/</guid>
+      <description>Submitted paper for IEEE International Conference on Quantum Computing and Engineering (QCE) on the 1st of May 2023.
+Abstract We propose a quantum machine learning algorithm for data classification, inspired by the seminal computer vision approach of eigenfaces for face recognition. The algorithm enhances nearest neighbor/centroid classifiers with concepts from principal component analysis, enabling the automatic detection of outliers and finding use in anomaly detection domains beyond face recognition. Assuming classical input data, we formalize how to implement the algorithm using a quantum random access memory and state-of-the-art quantum linear algebra, discussing the complexity of performing the classification algorithm on a fault-tolerant quantum device.</description>
+    </item>
+    
+    <item>
+      <title>Sydraw</title>
+      <link>https://williambonvini.netlify.app/research/sydraw/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/research/sydraw/</guid>
+      <description> High level overview Sydraw (Synthetic Data Library) is a python library that helps you create synthetic 2D point clouds for single/multi-model single/multi-class tasks.
+Check out the links above for a comprehensive overview of its functionalities.
+Supported Parametric Models Ellipses Circles Hyperbolas Lines Hyperparameters number and tipology of parametric models number of total data points percentage of outliers (data points that do not belong to any model) percentage of noise corruption in each model </description>
+    </item>
+    
+    <item>
+      <title>Unsupervised learning for Multi-Model Consensus Maximization</title>
+      <link>https://williambonvini.netlify.app/research/ulmmcm/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/research/ulmmcm/</guid>
+      <description>High level overview Multi-model fitting is the task of retrieving several parametric models in unstructured data possibly contaminated by noise and outliers. This problem arises in many Computer Vision applications like the estimation of planes and primitives in architectural imagery and the recovery of multiple geometric transformations from stereo images.
+In this work we propose a novel Deep Learning architecture for solving multi-model fitting problems in an unsupervised fashion, relying on a consensus maximization formulation.</description>
+    </item>
+    
+  </channel>
+</rss>

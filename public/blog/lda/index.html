@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.105.0">
+<title>Topic Modeling with LDA | William Bonvini&#39;s Blog</title>
+
+
+<meta property="twitter:site" content="@William_Bonvini">
+<meta property="twitter:creator" content="@William_Bonvini">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="A modern, beautiful, and easily configurable blog theme for Hugo.">
+
+
+<meta property="og:site_name" content="William Bonvini&#39;s Blog">
+<meta property="og:title" content="Topic Modeling with LDA | William Bonvini&#39;s Blog">
+<meta property="og:description" content="A modern, beautiful, and easily configurable blog theme for Hugo." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://williambonvini.netlify.app/blog/lda/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://williambonvini.netlify.app/blog/lda/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://williambonvini.netlify.app/blog/lda/featured.jpg" >
+    
+    
+  <meta itemprop="name" content="Topic Modeling with LDA">
+<meta itemprop="description" content="Latent Dirichlet Allocation (LDA) is one of the most popular topic modeling techniques, even though the original paper has been published back in 2003. Topic modeling is a natural language processing technique that aims to automatically identify the underlying themes or topics in a collection of text documents. LDA produces two output
+a probability distribution on words to represent topics a probability distribution on topics to summarize documents So imagine you have the following set of sentences (a sentence is just a very short document):"><meta itemprop="datePublished" content="2023-01-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-01-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1688"><meta itemprop="image" content="https://williambonvini.netlify.app/blog/lda/featured.jpg">
+<meta itemprop="keywords" content="" />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.51048f8224904aac943a02f6057e4a47960d1d64abe43e43820ed1b3017122c1.css" integrity="sha256-UQSPgiSQSqyUOgL2BX5KR5YNHWSr5D5Dgg7RswFxIsE=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.fe5f9c38ef1d0223ec38e882ad26053310cd2a87955f8d80c58bfb646000db8c.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://williambonvini.netlify.app" title="Home">
+      <img src="/img/logo.png" class="dib db-l h2 w-auto" alt="William Bonvini&#39;s Blog">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/research/" title="Research">Research</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Topic Modeling with LDA</h1>
+        
+        <p class="f6 measure lh-copy mv1">By William Bonvini in <a href="https://williambonvini.netlify.app/categories/nlp">nlp</a>  <a href="https://williambonvini.netlify.app/categories/topic-modeling">topic modeling</a> </p>
+        <p class="f7 db mv0 ttu">January 15, 2023</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <div style="display: flex; align-items: center; justify-content: space-between">
+  <div style="width:45%; float:left">
+  	<figure>
+    	<img src="imgs/topic_modeling_intro.jpg" style="width:80%; height: auto">
+  	</figure>
+	</div>
+  <p style="width:45%">
+    <i>Latent Dirichlet Allocation</i> (LDA) is one of the most popular topic modeling techniques, even though the original paper has been published back in 2003. 
+    <br><br>
+    <i>Topic modeling</i> is a natural language processing technique that aims to automatically identify the underlying themes or topics in a collection of text documents.
+  <p>
+</div>
+<p>LDA produces two output</p>
+<ul>
+<li>a probability distribution on words to represent <strong>topics</strong></li>
+<li>a probability distribution on topics to summarize <strong>documents</strong></li>
+</ul>
+<p>So imagine you have the following set of sentences (a sentence is just a very short document):</p>
+<ul>
+<li><em>I like going running because it makes me feel good</em></li>
+<li><em>Let&rsquo;s go swimming tomorrow morning!</em></li>
+<li><em>I&rsquo;m going to play at a concert tonight</em></li>
+<li><em>The other day I saw a great pianist in the city streets</em></li>
+<li><em>I love working out while listening to rock music</em></li>
+</ul>
+<p>LDA will find the following summarization for such sentences:</p>
+<table>
+<thead>
+<tr>
+<th>Sentence</th>
+<th>Topic A</th>
+<th>Topic B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>I like going running because it makes me feel good</em></td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><em>Let&rsquo;s go swimming tomorrow morning!</em></td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><em>I&rsquo;m going to play at a concert tonight</em></td>
+<td>20%</td>
+<td>80%</td>
+</tr>
+<tr>
+<td><em>The other day I saw a great pianist in the city streets</em></td>
+<td>0%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><em>I love working out while listening to rock music</em></td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table>
+<p>An the following representation for the two topics:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>running</th>
+<th>swimming</th>
+<th>play</th>
+<th>concert</th>
+<th>pianist</th>
+<th>work out</th>
+<th>rock</th>
+<th>music</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topic A</td>
+<td>30%</td>
+<td>30%</td>
+<td>10%</td>
+<td></td>
+<td></td>
+<td>30%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Topic B</td>
+<td></td>
+<td></td>
+<td>12%</td>
+<td>22%</td>
+<td>22%</td>
+<td></td>
+<td>22%</td>
+<td>22%</td>
+</tr>
+</tbody>
+</table>
+<p>Ok, so how do we obtain such output?</p>
+<p>Before diving into the algorithm let&rsquo;s revise a couple of prerequisities.</p>
+
+
+
+
+<h2 id="prerequisites">Prerequisites
+  <a href="#prerequisites"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+
+
+
+
+<h3 id="poisson-distribution">Poisson Distribution
+  <a href="#poisson-distribution"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div style="text-align:center">
+  <figure>
+  	<img src='imgs/call-center.jpg' style="zoom:20%"> 
+    <figcaption><br><i>Call center calls are a typical example of Poisson distribution</i></figcaption>
+	</figure>
+</div>
+<p>The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time or space if these events occur with a known constant mean rate and independently of the time since the last event.</p>
+<p>Example:
+A call center receives an average of 180 calls per hour, 24 hours a day. The calls are independent: receiving one does not change the probability of when the next one will arrive. The number of calls received during any minute can be modeled as a Poisson probability distribution with mean 3:<br>
+with high probability the call center will receive 2 or 3 calls in a specific minute, but there is a small chance it will receive 0 or even 6.</p>
+  <div>
+    \begin{align}
+P(\text{k calls in a minute}) &= \frac{\lambda^k\cdot e^{-\lambda}}{k!} = \frac{3^k\cdot e^{-3}}{k!}
+\\
+\\
+P(\text{0 call in a minute}) &= \frac{3^0\cdot e^{-3}}{0!}=0.05
+\\
+P(\text{1 call in a minute}) &= \frac{3^1\cdot e^{-3}}{1!}=0.15
+\\
+P(\text{2 call in a minute}) &= \frac{3^2\cdot e^{-3}}{2!}=0.23
+\\
+P(\text{3 call in a minute}) &= \frac{3^3\cdot e^{-3}}{3!}=0.23
+\\
+P(\text{4 call in a minute}) &= \frac{3^4\cdot e^{-3}}{4!}=0.17
+\\
+\\
+\vdots
+\end{align}
+  </div>
+<p>This distribution makes this assumptions:</p>
+<ul>
+<li>The occurrence of one event does not affect the probability that a second event will occur \(\to\) events occur independently.</li>
+<li>Two events cannot occur at exactly the same instant; instead, at each very small sub-interval, either exactly one event occurs, or no event occurs.</li>
+</ul>
+<p>If these conditions are true, then \(k\) is a Poisson random variable, and the distribution of \(k\) is a Poisson distribution.</p>
+
+
+
+
+<h3 id="dirichlet-distribution">Dirichlet Distribution
+  <a href="#dirichlet-distribution"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div style="text-align:center">
+  <figure>
+    <img src="imgs/dirichlet_plots.png" style="zoom:75%">
+    <figcaption>
+      <i>Some possible configurations for a Dirichlet distribution with 3 parameters. 
+        <br>
+        On top are shown the heat maps of the distribution, on the bottom are shown data points sampled from each configuration. 
+        <br> 
+        Each vertex corresponds to an "entity". In LDA entities are topics. 
+        Image credits to <a href="https://gist.github.com/tboggs/8778945">tboggs</a>.</i>
+    </figcaption>
+  </figure>
+</div>
+<p>The Dirichlet distribution is a family of continuous multivariate probability distributions parametrized by a vector \(\alpha\) of positive reals.<br>
+I will explain it in a simple way, that I think makes it easy to grasp the rationale behind it.</p>
+<p>Do you remember the Beta distribution? It is a continuous distribution that is usually dubbed as &ldquo;the probability distribution of probabilities&rdquo;, because it can only take values between \(0\) and \(1\). <br>
+The Beta distribution has two parameters: \(\alpha\) and \(\beta\).</p>
+<ul>
+<li>\(\alpha\)<br>
+an integer, the higher it is, the higher the probability of success is</li>
+<li>\(\beta\)<br>
+an integer, the higher it is, the higher the probability of failure is</li>
+</ul>
+<p>The Dirichlet distribution is a generalization of the Beta distribution. It is a probability distribution describing probabilities of outcomes. Instead of describing probability of one of two outcomes of a Bernoulli trial, like the Beta distribution does, it describes probability of \(K\) outcomes.<br>
+The Beta distribution is the special case of the Dirichlet distribution with \(K=2\).<br>
+The parameters are \(\alpha_1, \alpha_2, \dots, \alpha_K\) all strictly positive, defined analogously to \(\alpha\) and \(\beta\) of the Beta distribution.</p>
+
+
+
+
+<h1 id="latent-dirichlet-allocation-in-depth">Latent Dirichlet Allocation in depth
+  <a href="#latent-dirichlet-allocation-in-depth"></a>
+</h1>
+
+
+
+
+<h3 id="assumptions">Assumptions
+  <a href="#assumptions"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>&ldquo;bag-of-words&rdquo; assumption: the order of the words in a document doesn&rsquo;t matter</li>
+<li>documents are exchangeable: the specific ordering of the documents in a corpus can also be neglected</li>
+</ul>
+<p>A classic representation theorem due to de Finetti (1990) establishes that any collection of exchangeable random variables has a representation as a mixture distribution (a mixture of two or more probability distributions).</p>
+
+
+
+
+<h3 id="notation-and-terminology">Notation and terminology
+  <a href="#notation-and-terminology"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<ul>
+<li>
+<p>A <em><strong><u>word</u></strong></em> is the basic unit of discrete data, defined to be an item from a vocabulary indexed by \(1, \dots ,V\).<br>
+We represent words using unit-basis vectors that have a single component equal to one and all other components equal to zero.<br>
+Thus, using superscripts to denote components, the \(v\)-th word in the vocabulary is represented by a vector \(w\) such that \(w^v=1\) and \(w^u=0\) for \(u\neq v\).</p>
+</li>
+<li>
+<p>A <em><strong><u>document</u></strong></em> is a sequence of \(N\) words denoted by \(\mathbf{w}= (w_1,w_2, \dots,w_n)\), where \(w_n\) is the \(n\)-th word in the sequence.</p>
+</li>
+<li>
+<p>A <em><strong><u>corpus</u></strong></em> is a collection of \(M\) documents denoted by \(C = {\mathbf{w_1}, \mathbf{w_2}, \dots, \mathbf{w_M}}\).</p>
+</li>
+</ul>
+
+
+
+
+<h3 id="algorithm">Algorithm
+  <a href="#algorithm"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+
+
+
+
+<h5 id="assumption-on-documents-generation">Assumption on documents generation
+  <a href="#assumption-on-documents-generation"></a>
+</h5>
+<p>LDA assumes that documents are represented as random mixtures over latent topics, where each topic is characterized by a distribution over words.</p>
+<div style="text-align:center">
+  <figure>
+    <img src="imgs/lda_diagram.png">
+    <figcaption><i>Graphical model representation of LDA. The boxes are “plates” representing replicates. The outer plate represents documents, while the inner plate represents the repeated choice of topics and words within a document.</i></figcaption>
+  </figure>
+</div>
+<p>LDA assumes the following generative process for each document \(\textbf{w}\) in a corpus \(D\):</p>
+<ol>
+<li>Choose \(N \sim Poisson(\xi) \)</li>
+<li>Choose \(\theta \sim Dir(\alpha)\)</li>
+<li>For each of the \(N\) words \(w_n\)
+<ol>
+<li>Choose a topic
+\(z_n \sim Multinomial(\theta)\)</li>
+<li>Choose a word \(w_n\) from \(p(w_n|z_n,\beta)\):<br>
+a multinomial probability conditioned on the topics \(z_n\).</li>
+</ol>
+</li>
+</ol>
+<p>where:</p>
+<ul>
+<li>
+<p>\(N \sim Poisson(\xi)\) means that we are sampling a number of words given the average number of words \(\xi\).</p>
+</li>
+<li>
+<p>\(\theta \sim Dir(\alpha)\) means that we are sampling topic probabilities given the vector of Dirichlet parameters \(\alpha\).<br>
+if the number of topics is \(3\), \(\theta\) might look like \(\theta = (0.3, 0.5, 0.2)\).</p>
+</li>
+<li>
+<p>\(z_n \sim Multinomial(\theta)\)  means that we are sampling one out of the \(N\) topics, using \(\theta\) as our probability distribution over topics. <br>
+If we consider \(\theta = (0.3, 0.5, 0.2)\) we&rsquo;ll have</p>
+<ul>
+<li>\(z_n=z^1\) with \(30%\) probability</li>
+<li>\(z_n = z^2\) with \(50%\) probability</li>
+<li>\(z_n = z^3\) with \(20%\) probability</li>
+</ul>
+<p>where \(z^1, z^2, z^3\) are simply three variables that represent the \(3\) topics.</p>
+</li>
+<li>
+<p>\(\beta\) is a matrix of dimensionality \(k \times V\) (number of topics times number of words in the vocabulary)<br>
+where \({\beta_{ij}=p(w^j=1|z^i=1)}\).</p>
+</li>
+</ul>
+<p>Assuming the generative model for a collection of documents, LDA then tries to backtrack from the documents to find a set of topics that are likely to have generated the collection.</p>
+
+
+
+
+<h5 id="collapsed-gibbs-sampling">Collapsed Gibbs Sampling
+  <a href="#collapsed-gibbs-sampling"></a>
+</h5>
+<p>So now suppose you have a set of documents. You&rsquo;ve chosen some fixed number of \(K\) topics to discover, and want to use LDA to learn the topic representation of each document and the words associated to each topic.<br>
+How do you do this? one way, known as collapsed Gibbs sampling, is the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">1.</span> Go through each document and randomly assign each word in the document to one of the K topics
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">2.</span> for each document
+</span></span><span style="display:flex;"><span>	<span style="color:#000;font-weight:bold">1.</span> for each word w in the document
+</span></span><span style="display:flex;"><span>		<span style="color:#000;font-weight:bold">2.</span> reassign a new topic to w using the probability P
+</span></span></code></pre></div><p>where</p>
+<div>
+  $$P = P(z_i=j|z_{-i},w_i,d_i) \propto \frac{C^{WT}_{w_ij}+ \eta}{\sum^{W}_{w=1}C^{WT}_{wj}+W\eta}\times \frac{C^{DT}_{d_ij}+\alpha}{\sum_{t=1}^TC^{DT}_{d_it}+T\alpha}$$
+</div>
+<p>left member of the expression:</p>
+<ul>
+<li>
+<p>\(P(z_i=j)\) - the probability that token \(i\) is assigned to topic \(j\)</p>
+</li>
+<li>
+<p>\(z_{-i}\) - represents topic assignments of all other tokens</p>
+</li>
+<li>
+<p>\(w_i\) - Word (index) of the \(i\)-th token</p>
+</li>
+<li>
+<p>\(d_i\) - Document containing the \(i\)-th token</p>
+</li>
+</ul>
+<p>right member of the expression:</p>
+<ul>
+<li>
+<p>\(C^{WT}\) - the word-topic matrix</p>
+</li>
+<li>
+<p>\(\sum_{w=1}^{W}C_{wj}^{WT}\) - total number of tokens (words) in each topic</p>
+</li>
+<li>
+<p>\(C^{DT}\) - the document-topic matrix</p>
+</li>
+<li>
+<p>\(\sum_{t=1}^{T}C_{d_it}^DT\) - total number of tokens (words) in document \(i\)</p>
+</li>
+<li>
+<p>\(\eta\) - parameter that sets the topic distribution for the words. The higher the more spread out the words will be across he specified number of topics (\(K\))</p>
+</li>
+<li>
+<p>\(\alpha\) - parameter that sets the topic distribution for the documents. The higher the more spread out the documents will be across the specified number of topics (\(K\))</p>
+</li>
+<li>
+<p>\(W\) - the total number of words in the set of documents</p>
+</li>
+<li>
+<p>\(T\) - number of topics, equivalent of the \(K\) we defined earlier</p>
+</li>
+</ul>
+<p>We can iterate over the algorithm defined above until we find a stable representation of the matrices \(C^{WT}\) and \(C^{DT}\).</p>
+
+
+
+
+<h1 id="conclusions">Conclusions
+  <a href="#conclusions"></a>
+</h1>
+<div style="text-align: center">
+  <figure>
+    <img src="imgs/the_end_jungle_book.webp">
+  </figure>
+  <figcaption>The end scene of the Jungle book by Zoltan Korda UK, 1942</figcaption>
+</div>
+<p>In summary, Latent Dirichlet Allocation is a powerful tool for uncovering the underlying topics in a collection of text documents. We have seen how LDA works by analyzing the probability distribution of words in a text corpus and grouping them into different topics.</p>
+<p>LDA has a wide range of applications in various fields such as natural language processing, information retrieval, and text mining. In natural language processing, LDA can be used to classify text into different categories or to understand the underlying themes in a set of documents. In information retrieval, LDA can be used to improve search results by understanding the topics of documents and in text mining can be used to extract insights from unstructured data.</p>
+<p>Even though LDA is a very popular algorithm in the topic modeling realm, I suggest you to try out other more recent models, such as 
+<a href="https://github.com/ddangelov/Top2Vec" target="_blank" rel="noopener">Top2Vec</a> and 
+<a href="https://github.com/MaartenGr/BERTopic" target="_blank" rel="noopener">BERTopic</a>: The first one relies on applying the clustering algorithm HDBSCAN on high dimensional token embeddings (relying though on UMAP for dimensionaliy reduction), while BERTopic leverages transformers and a class-based TF-IDF procedure.</p>
+<p>Se you soon!</p>
+<p>Sources:</p>
+<ul>
+<li>
+<a href="https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf" target="_blank" rel="noopener">Original paper</a></li>
+<li>
+<a href="http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/" target="_blank" rel="noopener">Echen&rsquo;s blogpost</a></li>
+<li>
+<a href="https://ethen8181.github.io/machine-learning/clustering_old/topic_model/LDA.html" target="_blank" rel="noopener">Latent Dirichlet Allocation Using Gibbs Sampling</a></li>
+</ul>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">January 15, 2023</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">8 minute read, 1688 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://williambonvini.netlify.app/categories/nlp">nlp</a>  <a href="https://williambonvini.netlify.app/categories/topic-modeling">topic modeling</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://williambonvini.netlify.app/blog/intro_to_rl/">Introduction to Reinforcement Learning &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 William Bonvini
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/WilliamBonvini" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://open.spotify.com/user/chattershuts" title="spotify" target="_blank" rel="me noopener">
+      <i class="fab fa-spotify fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

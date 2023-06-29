@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.105.0">
+<title>Write better documentation with Sphinx | William Bonvini&#39;s Blog</title>
+
+
+<meta property="twitter:site" content="@William_Bonvini">
+<meta property="twitter:creator" content="@William_Bonvini">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="A modern, beautiful, and easily configurable blog theme for Hugo.">
+
+
+<meta property="og:site_name" content="William Bonvini&#39;s Blog">
+<meta property="og:title" content="Write better documentation with Sphinx | William Bonvini&#39;s Blog">
+<meta property="og:description" content="A modern, beautiful, and easily configurable blog theme for Hugo." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://williambonvini.netlify.app/blog/sphinx/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://williambonvini.netlify.app/blog/sphinx/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://williambonvini.netlify.app/blog/sphinx/featured.png" >
+    
+    
+  <meta itemprop="name" content="Write better documentation with Sphinx">
+<meta itemprop="description" content="topic OS required modules Generate Sphinx documentation for a Python project with the ReadTheDocs theme. Windows venv High Level Overview Suppose that you have written a Python library and you want to share it with your colleagues. One of the most important things to do is to write a clear documentation. This tutorial will help you in achieving just that.
+Our sample project&rsquo;s structure will look like this
+my_library | |---my_module."><meta itemprop="datePublished" content="2022-11-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-11-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="809"><meta itemprop="image" content="https://williambonvini.netlify.app/blog/sphinx/featured.png">
+<meta itemprop="keywords" content="" />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.51048f8224904aac943a02f6057e4a47960d1d64abe43e43820ed1b3017122c1.css" integrity="sha256-UQSPgiSQSqyUOgL2BX5KR5YNHWSr5D5Dgg7RswFxIsE=" media="screen">
+  
+  
+  <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.fe5f9c38ef1d0223ec38e882ad26053310cd2a87955f8d80c58bfb646000db8c.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://williambonvini.netlify.app" title="Home">
+      <img src="/img/logo.png" class="dib db-l h2 w-auto" alt="William Bonvini&#39;s Blog">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/research/" title="Research">Research</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Write better documentation with Sphinx</h1>
+        
+        <p class="f6 measure lh-copy mv1">By William Bonvini in <a href="https://williambonvini.netlify.app/categories/documentation">documentation</a> </p>
+        <p class="f7 db mv0 ttu">November 12, 2022</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <table>
+<thead>
+<tr>
+<th>topic</th>
+<th>OS</th>
+<th>required modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate Sphinx documentation for a Python project with the <em>ReadTheDocs</em> theme.</td>
+<td>Windows</td>
+<td>venv</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h3 id="high-level-overview">High Level Overview
+  <a href="#high-level-overview"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div style="text-align:center">
+  <figure>
+    <img src="imgs/sphinxdoc.png" style="zoom:40%">
+  </figure>
+</div>
+<p>Suppose that you have written a Python library and you want to share it with your colleagues. One of the most important things to do is to write a clear documentation. This tutorial will help you in achieving just that.</p>
+<p>Our sample project&rsquo;s structure will look like this</p>
+<pre tabindex="0"><code>my_library
+	|
+	|---my_module.py
+</code></pre><p>And <code>my_module.py</code> contains the following code:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">MyFirstClass</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">def</span> __init__(<span style="color:#999">self</span>, name: <span style="color:#0086b3">dict</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;&#34;&#34; class constructor &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#999">self</span><span style="color:#000;font-weight:bold">.</span>name <span style="color:#000;font-weight:bold">=</span> name
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">foo</span>(<span style="color:#999">self</span>) <span style="color:#000;font-weight:bold">-&gt;</span> <span style="color:#000;font-weight:bold">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;&#34;&#34; This method prints a welcome message &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0086b3">print</span>(<span style="color:#d14">f</span><span style="color:#d14">&#34;Hello </span><span style="color:#d14">{</span><span style="color:#999">self</span><span style="color:#000;font-weight:bold">.</span>name<span style="color:#d14">}</span><span style="color:#d14">&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">bar</span>(<span style="color:#999">self</span>) <span style="color:#000;font-weight:bold">-&gt;</span> <span style="color:#000;font-weight:bold">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#d14">&#34;&#34;&#34; This method prints a goodbye message &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0086b3">print</span>(<span style="color:#d14">f</span><span style="color:#d14">&#34;Goodbye </span><span style="color:#d14">{</span><span style="color:#999">self</span><span style="color:#000;font-weight:bold">.</span>name<span style="color:#d14">}</span><span style="color:#d14">&#34;</span>)
+</span></span></code></pre></div><p>in the end we will obtain an HTML page that documents all the methods we have written above.</p>
+<p>Let&rsquo;s start!</p>
+
+
+
+
+<h3 id="create-a-virtual-environment-and-install-sphinx">Create a virtual environment and install Sphinx
+  <a href="#create-a-virtual-environment-and-install-sphinx"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div style="text-align: center">
+  <figure>
+    <img src="imgs/sphinx-installation.png" style="zoom:30%">
+  </figure>
+  <figcaption><i>A bunch of people installing a sphinx.</i></figcaption>
+</div>
+<ol>
+<li>
+<p>Open a shell (you&rsquo;ll be using this for all the next steps of this tutorial)</p>
+</li>
+<li>
+<p>Go to the <code>my_project</code> folder</p>
+</li>
+<li>
+<p>Find the path of your python executable</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -c <span style="color:#d14">&#34;import os, sys; print(os.path.dirname(sys.executable))&#34;</span>
+</span></span></code></pre></div><p>It will output a path (I&rsquo;ll refer to it as <em>MY_PATH</em>).<br>
+Copy it, you will need it in the next step.</p>
+</li>
+<li>
+<p>Create a virtual environment</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MY_PATH/python -m venv <span style="color:#d14">&#34;venv-mylibrary&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>activate your virtual environment by running</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>venv-mylibrary/Scripts/activate
+</span></span></code></pre></div></li>
+<li>
+<p>Run the following command to install Sphinx and some auxiliary libraries.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install <span style="color:#008080">sphinx</span><span style="color:#000;font-weight:bold">==</span>5.3.0 sphinxcontrib.applehelp<span style="color:#000;font-weight:bold">==</span>1.0.3 sphinx-rtd-theme<span style="color:#000;font-weight:bold">==</span>1.1.1
+</span></span></code></pre></div><p>Now you have added sphinx to the requirements of your virtual environment</p>
+</li>
+</ol>
+
+
+
+
+<h3 id="sphinx-quickstart">Sphinx Quickstart
+  <a href="#sphinx-quickstart"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div style="text-align:center">
+  <figure>
+    <img src="imgs/sphinx-quickstart.png" style="zoom:35%">
+  </figure>
+</div>
+<ol>
+<li>
+<p>Create a folder where you&rsquo;ll put your documentation files. I like to call it <code>docs</code>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir docs
+</span></span></code></pre></div></li>
+<li>
+<p>Navigate to the docs directory</p>
+</li>
+<li>
+<p>Run the following command to create the necessary Sphinx files and directories:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sphinx-quickstart
+</span></span></code></pre></div><p>This command will prompt you for some information about your project, let&rsquo;s see them  in detail:</p>
+<pre tabindex="0"><code>&gt; Separate source and build directories (y/n) [n]:
+</code></pre><p>I suggest you to write <code>y</code>, It looks cleaner.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; Project name:
+</span></span></code></pre></div><p>I suggest you to use the name of the project&rsquo;s root folder.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; Author name<span style="color:#000;font-weight:bold">(</span>s<span style="color:#000;font-weight:bold">)</span>:
+</span></span></code></pre></div><p>Insert the author names in alphabetical order, separated by a <code>,</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; Project release <span style="color:#000;font-weight:bold">[]</span>:
+</span></span></code></pre></div><p>If you press enter, it will default to <code>0.0.0</code>, otherwise specify a different version.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; Project languge <span style="color:#000;font-weight:bold">[</span>en<span style="color:#000;font-weight:bold">]</span>: 
+</span></span></code></pre></div><p>Press enter, it will default to <code>en</code>.</p>
+<p>Finished: An initial directory structure has been created.</p>
+<pre tabindex="0"><code>my_library
+    |
+    | - docs 
+    |    |
+    |    | ---------- source
+    |    |				|
+    |    |				| - conf.py
+    |    |				| - index.rst
+    |    | - make.bat
+    |    | - Makefile
+    |
+    | - my_module.py
+</code></pre>
+
+
+
+<h3 id="edit-confpy">Edit <code>conf.py</code>
+  <a href="#edit-confpy"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>The <code>conf.py</code> file let&rsquo;s you specify what extensions, themes and auxiliary information to create your Sphinx documentation.
+Modify it as shown below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># find the row where html_theme is set and modify it as follows (if it doesn&#39;t exist create it from scratch)</span>
+</span></span><span style="display:flex;"><span>html_theme <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;sphinx_rtd_theme&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># find the row that contains extensions = [] and modify it as follows:</span>
+</span></span><span style="display:flex;"><span>extensions <span style="color:#000;font-weight:bold">=</span> [<span style="color:#d14">&#39;sphinx.ext.autodoc&#39;</span>, <span style="color:#d14">&#39;sphinx.ext.napoleon&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Add the path of the root directory of the library</span>
+</span></span><span style="display:flex;"><span>sys<span style="color:#000;font-weight:bold">.</span>path<span style="color:#000;font-weight:bold">.</span>insert(<span style="color:#099">0</span>, os<span style="color:#000;font-weight:bold">.</span>path<span style="color:#000;font-weight:bold">.</span>abspath(<span style="color:#d14">&#39;../../my_library&#39;</span>))
+</span></span></code></pre></div>
+
+
+
+<h3 id="create-my_modulerst">Create <code>my_module.rst</code>
+  <a href="#create-my_modulerst"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>At the same level of <code>index.rst</code> create a new file called  <code>my_module.rst</code> (give it the name of the module you want to document in Sphinx).</p>
+<pre tabindex="0"><code>my_library
+    |
+    | - docs 
+    |    |
+    |    | ---------- source
+    |    |				|
+    |    |				| - conf.py
+    |    |				| - index.rst
+    |	 |				| - my_module.rst
+    |    | - make.bat
+    |    | - Makefile
+    |
+    | - my_module.py
+</code></pre><p>And populate it as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rst" data-lang="rst"><span style="display:flex;"><span><span style="color:#999">MyFirstClass</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">================</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>Description of MyClassName<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>.. <span style="color:#000;font-weight:bold">autoclass</span>:: my_module.MyFirstClass<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   <span style="color:#458;font-weight:bold">:members:</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   <span style="color:#458;font-weight:bold">:undoc-members:</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   <span style="color:#458;font-weight:bold">:show-inheritance:</span>
+</span></span></code></pre></div><p>This will generate the documentation for each public method of <code>MyClassName</code>.</p>
+<p>Repeat this process for all the classes/modules you have.</p>
+
+
+
+
+<h3 id="edit-indexrst">Edit <code>index.rst</code>
+  <a href="#edit-indexrst"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Edit the file <code>docs/source/index.rst</code> to add to the table of content the link to the files you have just created.<br>
+Mind the empty line before <code>my_module</code>, it is necessary!</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rst" data-lang="rst"><span style="display:flex;"><span><span style="color:#999">Welcome to MY_LIBRARY&#39;s documentation!</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">=======================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>This is a high level description of MY_LIBRARY, modify it as you like.<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>.. <span style="color:#000;font-weight:bold">toctree</span>::<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   <span style="color:#458;font-weight:bold">:maxdepth:</span> <span style="color:#900;font-weight:bold">2</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   <span style="color:#458;font-weight:bold">:caption:</span> <span style="color:#900;font-weight:bold">Contents:</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   <span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>   my_module<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>.. <span style="color:#000080">_my_module:</span> my_module.rst<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#999">Indices and tables</span>
+</span></span><span style="display:flex;"><span><span style="color:#999">==================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#099">*</span> <span style="color:#008080">:ref:</span><span style="color:#008080">`genindex`</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#099">*</span> <span style="color:#008080">:ref:</span><span style="color:#008080">`modindex`</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#099">*</span> <span style="color:#008080">:ref:</span><span style="color:#008080">`search`</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span></code></pre></div>
+
+
+
+<h3 id="generate-html">Generate HTML
+  <a href="#generate-html"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Once you have populated all of the necessary files, you can generate the HTML documentation by running the following command from the <code>docs</code> directory:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make html
+</span></span></code></pre></div><p>This will create the HTML documentation for your package in the <code>docs/_build/html</code> directory.<br>
+You can view the documentation by opening the file <code>index.html</code> in a web browser.</p>
+
+
+
+
+<h3 id="conclusions">Conclusions
+  <a href="#conclusions"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div style="text-align:center">
+  <figure>
+    <img src="imgs/the_end.png" style="zoom:40%">
+    <figcaption><br><i>A smiling anthropomorphic Sphinx in an elegant red jacket during a curtain call of a Broadway show in the style of Salvador Dalì.</i></figcaption>
+  </figure>
+</div>
+<p>That&rsquo;s it for this tutorial!<br>
+You can now publish your repository to 
+<a href="https://readthedocs.org/" target="_blank" rel="noopener">readthedocs</a> itself, or in any static website hosting platform (like GitHub Pages).</p>
+<p>Suggested reads:</p>
+<ul>
+<li>
+<a href="https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Read The Docs &ldquo;How to&rdquo;</a> - ReadTheDocs itself has written a tutorial on how to generate documentation using Sphinx. Go to the <em>Populating Our Documentation</em> section.</li>
+<li>[Publishing the documentation to ReadTheDocs](</li>
+</ul>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">November 12, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">4 minute read, 809 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://williambonvini.netlify.app/categories/documentation">documentation</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://williambonvini.netlify.app/blog/intro_to_rl/">&larr; Introduction to Reinforcement Learning</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 William Bonvini
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/WilliamBonvini" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://open.spotify.com/user/chattershuts" title="spotify" target="_blank" rel="me noopener">
+      <i class="fab fa-spotify fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

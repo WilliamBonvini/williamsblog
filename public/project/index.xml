@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal Projects (WiP) on William Bonvini&#39;s Blog</title>
+    <link>https://williambonvini.netlify.app/project/</link>
+    <description>Recent content in Personal Projects (WiP) on William Bonvini&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 May 2023 21:44:12 +0200</lastBuildDate><atom:link href="https://williambonvini.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shawn</title>
+      <link>https://williambonvini.netlify.app/project/shawn/</link>
+      <pubDate>Tue, 30 May 2023 21:44:12 +0200</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/shawn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Academic Projects</title>
+      <link>https://williambonvini.netlify.app/project/academic_projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/academic_projects/</guid>
+      <description>Name Description Link Tech Stack Year Coursera course on RL Written teaching material on ML based methods for the Coursera course Advanced Recommender Systems link 2021 Android Game Development Developed 4 games (i.e. Memory) for Italian Senile Dementia Treatment Center to test their cognitive abilities Android; LibGDX 2021 ML Notes Android App Developed app that gathers markdown notes of academic courses I attended, enriched with quizzes and embedded YouTube Videos link Android 2020 Study on word embeddings bias Analyzed four papers to investigate methodologies for debiasing word embeddings link 2020 University Deep Learning Competition Competition consisting in the implementation of Keras models to perform three different tasks: classification; binary segmentation; visual question answering.</description>
+    </item>
+    
+    <item>
+      <title>Call Centers &amp; Genetic Algorithms</title>
+      <link>https://williambonvini.netlify.app/project/call_center/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/call_center/</guid>
+      <description>High Level Overview Client Developed a solution for an Italian company that provides other companies with qualified virtual assistants to support their customers.
+Problem They were looking for a way to automate the insertion of breaks in their turn allocation matrix, taking into considerations some constraints on the employees contract type (part-time, full-time) and role (team leader, inbound agent).
+Solution A genetic algorithm that takes in input the turn allocation matrix with no breaks allocated and generates a high number of constraints-compliant assignments at each iteration.</description>
+    </item>
+    
+    <item>
+      <title>Personalized Cosmetics Startup</title>
+      <link>https://williambonvini.netlify.app/project/myformula/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/myformula/</guid>
+      <description>High Level Overview As an original team member of My-Formula, I worked closely with the founder during the company&amp;rsquo;s early stages.
+My-Formula is a cosmetics company that offers personalized hair products based on one&amp;rsquo;s habits and characteristics.
+In particular, I provided consultancy on the website development side, implemented the personalization algorithm, worked on the cloud infrastructure, and delivered aggregate reports on customers&amp;rsquo; behaviour on a regular basis.</description>
+    </item>
+    
+    <item>
+      <title>Senile Dementia Monitoring Tool</title>
+      <link>https://williambonvini.netlify.app/project/senile_dementia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://williambonvini.netlify.app/project/senile_dementia/</guid>
+      <description>High Level Overview Worked closely with the Galliera hospital from Genova to develop four cross-platform game apps in order to analyze the patients&amp;rsquo; cognitive abilities.
+Tech Stack Java LibGDX Python basic data science libraries (numpy, pandas, seaborn) List of games Memory Popular game.
+Memory is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn.</description>
+    </item>
+    
+  </channel>
+</rss>
