@@ -10,10 +10,15 @@ layout: single
 subtitle: A deep approach to find multiple parametric models from unordered data in an unsupervised fashion.
 title: Unsupervised learning for Multi-Model Consensus Maximization
 links:
+- icon: book
+  icon_pack: fa
+  name: Thesis
+  url: https://www.politesi.polimi.it/handle/10589/173189
 - icon: github
   icon_pack: fab
   name: code
   url: https://github.com/WilliamBonvini/ulmmcm
+  
 ---
 
 ### High level overview
