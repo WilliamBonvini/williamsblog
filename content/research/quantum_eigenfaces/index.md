@@ -13,8 +13,7 @@ links:
   url: https://github.com/WilliamBonvini/quantum-eigenfaces/tree/main
 ---
 
-I co-authored a paper at the intersection between Machine Learning and Quantum Computing.  
-It has been accepted for presentation at [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/), which will be held in September 2023.
+I co-authored a research paper that introduces a quantum implementation of a machine learning algorithm for data classification, demonstrating its superior runtime performance compared to the classical counterpart. We had the privilege of presenting our findings at the [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) in September 2023.
 
 ### Abstract
 
