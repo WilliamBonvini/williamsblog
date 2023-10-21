@@ -11,9 +11,17 @@ links:
   icon_pack: fab
   name: Code
   url: https://github.com/WilliamBonvini/quantum-eigenfaces/tree/main
+- icon: file
+  icon_pack: fa
+  name: "Presentation Slides"
+  url: https://williambonvini.com/resources/qalg_presentation.pdf
 ---
 
-I co-authored a research paper that introduces a quantum implementation of a machine learning algorithm for data classification, demonstrating its superior runtime performance compared to the classical counterpart. We had the privilege of presenting our findings at the [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) in September 2023.
+I co-authored a research paper that introduces a quantum implementation of a seminal machine learning algorithm for data classification. We had the privilege of presenting our findings at the [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) in September 2023.
+
+#### Authors
+Armando Bellante, William Bonvini, Stefano Vanerio, Stefano Zanero.
+
 
 ### Abstract
 
