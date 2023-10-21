@@ -5,21 +5,29 @@ categories:
 - Deep Learning
 date: "2021-06-15"
 draft: false
-excerpt: A deep approach to find multiple parametric models from unordered data in an unsupervised fashion.
+excerpt: An unsupervised approach to discovering multiple parametric models from unstructured data.
 layout: single
-subtitle: A deep approach to find multiple parametric models from unordered data in an unsupervised fashion.
+subtitle: An unsupervised approach to discovering multiple parametric models from unstructured data.
 title: Unsupervised learning for Multi-Model Consensus Maximization
 links:
 - icon: book
   icon_pack: fa
   name: Thesis
   url: https://www.politesi.polimi.it/handle/10589/173189
+- icon: file
+  icon_pack: fa
+  name: Presentation Slides
+  url: https://williambonvini.com/resources/ulmmcm_presentation.pdf
 - icon: github
   icon_pack: fab
   name: code
   url: https://github.com/WilliamBonvini/ulmmcm
   
 ---
+
+#### Authors
+William Bonvini, supervised by Luca Magri & Giacomo Boracchi.
+
 
 ### High level overview
 

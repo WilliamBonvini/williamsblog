@@ -29,9 +29,6 @@ A and B are Linux users, C and D are Windows users, while E and F are MacOs user
 
 
 
-
-
-
 ## Installation
 
 To get started, follow these steps:
