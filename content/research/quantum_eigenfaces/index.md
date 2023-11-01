@@ -17,7 +17,10 @@ links:
   url: https://williambonvini.com/resources/qalg_presentation.pdf
 ---
 
-I co-authored a research paper that introduces a quantum implementation of a seminal machine learning algorithm for data classification. We had the privilege of presenting our findings at the [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) in September 2023.
+I co-authored a research paper that introduces a quantum implementation of a seminal machine learning algorithm for data classification. We had the privilege of presenting 
+our findings at the [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) in September 2023.  
+It will soon be published in the IEEE Proceedings. 
+
 
 #### Authors
 Armando Bellante, William Bonvini, Stefano Vanerio, Stefano Zanero.
