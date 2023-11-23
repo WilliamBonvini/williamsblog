@@ -2,9 +2,10 @@
 author: William Bonvini
 date: "2023-05-07"
 draft: false
-excerpt: Linear Feature Mapping and Nearest Neighbor Classification with Outlier Detection
+excerpt: A quantum implementation of an algorithm for linear feature mapping and nearest neighbor classification with outlier detection.
 layout: single
-subtitle: Linear Feature Mapping and Nearest Neighbor Classification with Outlier Detection
+subtitle: A quantum implementation of an algorithm for linear feature mapping and nearest neighbor classification with outlier detection.
+
 title: Quantum Eigenfaces
 links:
 - icon: github

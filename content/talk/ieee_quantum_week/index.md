@@ -7,7 +7,7 @@ date_end: "2023-09-17"
 draft: false
 event: IEEE International Conference on Quantum Computing and Engineering
 event_url: https://qce.quantum.ieee.org/2023/
-excerpt: co-authored paper presented at IEEE Quantum Week.
+excerpt: Co-authored a paper on quantum machine learning presented at IEEE Quantum Week.
 featured: true
 layout: single
 links:
