@@ -1,16 +1,16 @@
 ---
-author: William Bonvini
+author: 
 date: "2021-08-20"
 draft: false
-excerpt: A Python library that helps you generate synthetic 2D and 3D data possibly corrupted by noise and outliers.
+excerpt: A Python library designed to synthesize data points for parametric models, incorporating noise and outliers.
 layout: single
-subtitle: A Python library that helps you generate synthetic 2D and 3D data contaminated with noise and outliers.
+subtitle: A Python library designed to synthesize data points for parametric models, incorporating noise and outliers. This tool aids in generating realistic datasets for model testing and validation.
 title: Sydraw
 links:
 - icon: github
   icon_pack: fab
   name: Code
-  url: https://github.com/WilliamBonvini/syndalib
+  url: https://github.com/WilliamBonvini/sydraw
 - icon: book
   icon_pack: fa
   name: Documentation
@@ -23,7 +23,7 @@ links:
 
 ### High level overview
 
-Sydraw (Synthetic Data Library) is a python library that helps you create synthetic 2D point clouds for single/multi-model single/multi-class tasks.  
+Sydraw is a python library that helps you create synthetic 2D point clouds for single/multi-model single/multi-class tasks.  
 Check out the links above for a comprehensive overview of its functionalities.
 
 ![](imgs/syndalib.png)
