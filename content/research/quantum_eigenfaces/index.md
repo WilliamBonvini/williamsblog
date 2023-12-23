@@ -8,6 +8,10 @@ subtitle: A quantum implementation of an algorithm for linear feature mapping an
 
 title: Quantum Eigenfaces
 links:
+- icon: graduation-cap
+  icon_pack: fa
+  name: "Paper"
+  url: https://ieeexplore.ieee.org/abstract/document/10313728
 - icon: github
   icon_pack: fab
   name: Code
@@ -20,12 +24,9 @@ links:
 
 I co-authored a research paper that introduces a quantum implementation of a seminal machine learning algorithm for data classification. We had the privilege of presenting 
 our findings at the [IEEE International Conference on Quantum Computing and Engineering (QCE)](https://qce.quantum.ieee.org/2023/) in September 2023.  
-It will soon be published in the IEEE Proceedings. 
-
 
 #### Authors
 Armando Bellante, William Bonvini, Stefano Vanerio, Stefano Zanero.
-
 
 ### Abstract
 
